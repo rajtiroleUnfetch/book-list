@@ -1,7 +1,17 @@
 export default {
   testEnvironment: "jsdom",
   transform: {
-    "^.+\\.(ts|tsx)$": ["@swc/jest"],
+    "^.+\\.(ts|tsx)$": [
+      "@swc/jest",
+      {
+        jsc: {
+          parser: {
+            syntax: "typescript",
+            tsx: true
+          }
+        }
+      }
+    ],
   },
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
@@ -10,10 +20,7 @@ export default {
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
   globals: {
     "ts-jest": {
-      tsconfig: {
-        jsx: "react-jsx",
-      },
-    },
-  },
+      tsconfig: "tsconfig.test.json"
+    }
+  }
 };
-

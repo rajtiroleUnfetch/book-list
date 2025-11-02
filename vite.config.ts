@@ -4,6 +4,9 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+   esbuild: {
+    logLevel: "silent",
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),

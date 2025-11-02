@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { render, screen, fireEvent } from "@testing-library/react";
 import { BookItem } from "../BookItem";
 import { PLACEHOLDER_IMAGE } from "@/data/mockBooks";

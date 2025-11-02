@@ -1,6 +1,6 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import AddBookModal from "./AddBookModal";
-import React from "react";
 
 describe("AddBookModal", () => {
   const setup = () => {
