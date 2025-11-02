@@ -1,0 +1,85 @@
+/* ============================
+  Global Theme
+   ============================ */
+:root {
+  --color-bg-light: #f5f9ff;
+  --color-primary: #4a5fc1;
+  --color-accent: #b9c6ff;
+  --color-text: #333;
+
+  --radius-lg: 0.625rem; /* 10px approx */
+  --shadow-sm: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.06);
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+}
+
+/* ============================
+   Layout Container
+   ============================ */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-bg-light);
+  color: var(--color-text);
+  font-family: system-ui, Arial, sans-serif;
+  padding-inline: var(--spacing-sm);
+}
+
+/* ============================
+    Header
+   ============================ */
+.app-header {
+  width: 100%;
+  text-align: center;
+  padding-block: var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: #fff;
+  border-bottom: 0.25rem solid var(--color-accent);
+}
+
+.title {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  opacity: 0.95;
+}
+
+/* ============================
+    Content Wrapper
+   ============================ */
+.content {
+  width: min(100%, 56rem); /* Max width ~900px */
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: border-radius 0.2s ease;
+}
+
+/* ============================
+   Responsiveness
+   ============================ */
+@media (max-width: 768px) {
+  .content {
+    padding: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding-block: var(--spacing-md);
+  }
+  .content {
+    margin-top: var(--spacing-md);
+  }
+}

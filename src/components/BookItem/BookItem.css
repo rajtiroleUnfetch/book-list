@@ -1,0 +1,79 @@
+/* Use same color system as App & BookList */
+:root {
+  --primary-blue: #4a5fc1;
+  --accent-blue: #b9c6ff;
+  --bg-light: #f5f9ff;
+  --text-dark: #333;
+}
+
+/* Card Container */
+.book-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* Image */
+.book-image {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
+  background-color: var(--accent-blue);
+}
+
+/* Title + Content */
+.book-info {
+  flex: 1;
+}
+
+.book-title {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.toggle-btn:hover {
+  background-color: var(--accent-blue);
+}
+
+/* Description text */
+.book-desc {
+  font-size: 0.9rem;
+  margin: 0;
+  background-color: var(--bg-light);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-image {
+    width: 100px;
+    height: 140px;
+  }
+
+  .toggle-btn {
+    width: 100%;
+  }
+}
+    

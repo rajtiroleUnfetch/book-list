@@ -1,0 +1,66 @@
+/* Matches the theme from App.css */
+:root {
+  --primary-blue: #4a5fc1;
+  --accent-blue: #b9c6ff;
+  --bg-light: #f5f9ff;
+  --text-dark: #333;
+}
+
+/* Section Container */
+.booklist-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 1rem;
+}
+
+/* Add Book Button */
+.add-book-btn {
+  background-color: var(--primary-blue);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-book-btn:hover {
+  background-color: var(--accent-blue);
+}
+
+/* List Styles */
+.booklist {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* Each item container */
+.booklist-item {
+  background-color: #fff;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border-left: 5px solid var(--primary-blue);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.booklist-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .add-book-btn {
+    width: 100%;
+  }
+
+  .booklist-item {  
+    padding: 12px;
+  }
+}
